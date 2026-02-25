@@ -1,6 +1,5 @@
-#pragma once
+﻿#pragma once
 #include "GameObject.h"
-#include <SFML/Graphics.hpp>
 
 class Block : public GameObject
 {

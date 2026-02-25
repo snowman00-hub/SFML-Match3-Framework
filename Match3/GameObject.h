@@ -1,5 +1,8 @@
-#pragma once
+﻿#pragma once
 #include <SFML/Graphics.hpp>
+#include "InputManager.h"
+#include "FontManager.h"
+#include "Define.h"
 
 class GameObject
 {

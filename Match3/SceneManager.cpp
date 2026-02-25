@@ -1,21 +1,22 @@
-#include "SceneManager.h"
-#include "PlayScene.h"
+﻿#include "SceneManager.h"
 
 SceneManager::SceneManager()
 {
-    currentScene = new PlayScene(); // 시작 씬
+
 }
 
-void SceneManager::HandleEvent(const sf::Event& event)
+void SceneManager::Update(float dt)
 {
-    if (currentScene)
-        currentScene->HandleEvent(event);
-}
+    if (!currentScene)
+        return;
 
-void SceneManager::Update(float deltaTime)
-{
-    if (currentScene)
-        currentScene->Update(deltaTime);
+    currentScene->Update(dt);
+
+    auto next = currentScene->GetNextScene();
+    if (next)
+    {
+        currentScene = std::move(next);
+    }
 }
 
 void SceneManager::Render(sf::RenderWindow& window)
@@ -24,8 +25,7 @@ void SceneManager::Render(sf::RenderWindow& window)
         currentScene->Render(window);
 }
 
-void SceneManager::ChangeScene(Scene* newScene)
+void SceneManager::ChangeScene(std::unique_ptr<Scene> newScene)
 {
-    delete currentScene;
-    currentScene = newScene;
+    currentScene = std::move(newScene);
 }

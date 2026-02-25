@@ -1,8 +1,18 @@
-#include "Game.h"
+﻿#include "Game.h"
+#include "InputManager.h"
+#include "FontManager.h"
+#include "TitleScene.h"
+#include "Define.h"
 
 Game::Game(int width, int height, const std::string& title)
     : window(sf::VideoMode(width, height), title), sceneMgr()
 {
+}
+
+void Game::Init()
+{
+    FontMgr.Load(FontKey::Default, "resources/font/NotoSansKR-Regular.ttf");
+    sceneMgr.ChangeScene(std::make_unique<TitleScene>());
 }
 
 void Game::Play()
@@ -27,13 +37,14 @@ void Game::ProcessEvent()
         if (event.type == sf::Event::Closed)
             window.close();
 
-        sceneMgr.HandleEvent(event);
+        InputMgr.HandleEvent(event);
     }
 }
 
 void Game::Update(float deltaTime)
 {
     sceneMgr.Update(deltaTime);
+    InputMgr.Update();
 }
 
 void Game::Render()

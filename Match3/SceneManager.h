@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <SFML/Graphics.hpp>
 #include "Scene.h"
 
@@ -6,11 +6,10 @@ class SceneManager
 {
 public:
 	SceneManager();
-	void HandleEvent(const sf::Event& event);
 	void Update(float deltaTime);
 	void Render(sf::RenderWindow& window);
-	void ChangeScene(Scene* newScene);
+	void ChangeScene(std::unique_ptr<Scene> newScene);
 
 private:
-	Scene* currentScene = nullptr;
+	std::unique_ptr<Scene> currentScene;
 };

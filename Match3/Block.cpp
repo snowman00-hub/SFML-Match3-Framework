@@ -1,4 +1,5 @@
 #include "Block.h"
+#include <iostream>
 
 Block::Block(float x, float y, sf::Color color)
 {
