@@ -13,13 +13,12 @@ public:
     virtual void Update(float deltaTime) {}
     virtual void Draw(sf::RenderWindow& window) {}
 
-    void SetPosition(float x, float y) { position = { x, y }; }
+    virtual void SetPosition(float x, float y) { position = { x, y }; }
+    virtual void SetScale(float x, float y) { scale = { x, y }; }
+    virtual void SetRotation(float angle) { rotation = angle; }
+
     sf::Vector2f GetPosition() const { return position; }
-
-    void SetScale(float x, float y) { scale = { x, y }; }
     sf::Vector2f GetScale() const { return scale; }
-
-    void SetRotation(float angle) { rotation = angle; }
     float GetRotation() const { return rotation; }
 
 protected:

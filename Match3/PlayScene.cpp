@@ -5,14 +5,26 @@
 
 PlayScene::PlayScene()
 {
+}
+
+void PlayScene::Init()
+{
     auto block1 = CreateObject<Block>(100.f, 100.f, sf::Color::Red);
     CreateObject<Block>(200.f, 100.f, sf::Color::Blue);
     CreateObject<Block>(150.f, 200.f, sf::Color::Green);
 }
 
+void PlayScene::LoadResources()
+{
+}
+
+void PlayScene::UnloadResources()
+{
+}
+
 void PlayScene::Update(float deltaTime)
 {
-    if (InputMgr.getKeyDown(sf::Keyboard::Space))
+    if (InputMgr.getKeyDown(sf::Keyboard::Num1))
     {
         nextScene = std::make_unique<TitleScene>();
     }

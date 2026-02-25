@@ -15,7 +15,7 @@ void SceneManager::Update(float dt)
     auto next = currentScene->GetNextScene();
     if (next)
     {
-        currentScene = std::move(next);
+        ChangeScene(std::move(next));
     }
 }
 
@@ -27,5 +27,14 @@ void SceneManager::Render(sf::RenderWindow& window)
 
 void SceneManager::ChangeScene(std::unique_ptr<Scene> newScene)
 {
+    if (currentScene)
+        currentScene->UnloadResources(); // 이전 씬 리소스 해제
+
     currentScene = std::move(newScene);
+
+    if (currentScene)
+    {
+        currentScene->LoadResources();   // 새 씬 리소스 로드
+        currentScene->Init();
+    }
 }
