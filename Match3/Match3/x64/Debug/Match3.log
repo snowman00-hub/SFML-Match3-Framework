@@ -1,22 +1,2 @@
-﻿  Game.cpp
-C:\Project-Younjunmo\SFML-Match3-Framework\Match3\InputManager.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-  (소스 파일 'Game.cpp'을(를) 컴파일하는 중)
-  
-  PlayScene.cpp
-C:\Project-Younjunmo\SFML-Match3-Framework\Match3\InputManager.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-  (소스 파일 'PlayScene.cpp'을(를) 컴파일하는 중)
-  
-  SceneManager.cpp
-C:\Project-Younjunmo\SFML-Match3-Framework\Match3\InputManager.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-  (소스 파일 'SceneManager.cpp'을(를) 컴파일하는 중)
-  
-  TitleScene.cpp
-C:\Project-Younjunmo\SFML-Match3-Framework\Match3\InputManager.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-  (소스 파일 'TitleScene.cpp'을(를) 컴파일하는 중)
-  
-  main.cpp
-C:\Project-Younjunmo\SFML-Match3-Framework\Match3\InputManager.h(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-  (소스 파일 'main.cpp'을(를) 컴파일하는 중)
-  
-  코드를 생성하고 있습니다...
-  Match3.vcxproj -> C:\Project-Younjunmo\SFML-Match3-Framework\Match3\x64\Debug\Match3.exe
+﻿  Match3.vcxproj -> C:\Project-Younjunmo\SFML-Match3-Framework\Match3\x64\Debug\Match3.exe
+  0개 파일이 복사되었습니다.
